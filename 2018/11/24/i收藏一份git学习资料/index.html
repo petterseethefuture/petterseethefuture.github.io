@@ -1,92 +1,341 @@
 <!DOCTYPE html>
-<html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <title>LFJ的学习笔记</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/gitment.css">
-    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_859455_eaq7v6w8ktj.css">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="# 关于git的学习笔记   了解git什么是gitGit是目前世界上最先进的分布式版本控制系统。 git的特点 版本库本地化，支持离线提交，相对独立不影响协同开发。 把内容按元数据方式存储，完整克隆版本库。 支持快速切换分支方便合并，比较合并性能好。 分布式版本库，无单点故障，内容完整性好。 更少的“仓库污染”。  操作git创建版本库 打开程序并输入$ mkdir simple$ cd si">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git学习资料">
+<meta property="og:url" content="http://yoursite.com/2018/11/24/i收藏一份git学习资料/index.html">
+<meta property="og:site_name" content="LFJ的学习笔记">
+<meta property="og:description" content="# 关于git的学习笔记   了解git什么是gitGit是目前世界上最先进的分布式版本控制系统。 git的特点 版本库本地化，支持离线提交，相对独立不影响协同开发。 把内容按元数据方式存储，完整克隆版本库。 支持快速切换分支方便合并，比较合并性能好。 分布式版本库，无单点故障，内容完整性好。 更少的“仓库污染”。  操作git创建版本库 打开程序并输入$ mkdir simple$ cd si">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkp0bjdo3bj20rs0rsmyn.jpg">
+<meta property="og:image" content="https://d26dzxoao6i3hh.cloudfront.net/items/3M0W1J2x433c1H3k2a0Y/3.png?v=6ee90e11">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkq72hfrfej20k305pdfw.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkq7v4wmy1j20kp0b53za.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkq8do1vlsj20k505cglu.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkq8kdl9hvj20jz07hmxf.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkqrvk3dfxj20k905cq38.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133ly1fkqs9fqs2ej20k106vdg6.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkqscy6mk6j20k402zwel.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkqsodiwpsj20jy02gaa2.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkqss6mrs0j20k202n74a.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkqta39w2wj20k40bb0tm.jpg">
+<meta property="og:image" content="https://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkqtp6c5cjj20k1053dfz.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133ly1fkqttw04hnj20ju05tglt.jpg">
+<meta property="og:image" content="https://www.liaoxuefeng.com/files/attachments/001384907720458e56751df1c474485b697575073c40ae9000/0">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkr220b2wvj20k105njro.jpg">
+<meta property="og:image" content="https://www.liaoxuefeng.com/files/attachments/0013849077337835a877df2d26742b88dd7f56a6ace3ecf000/0">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkr2ifuvydj20fw0cu754.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkr3wdll9vj20j50ev0tv.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkr448lir4j20hs0dgjsb.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkr5fz9x9bj20yr05m0sx.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkr5kn5kpsj20ji0h4jsv.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkr5tzm9xvj21690n0q4s.jpg">
+<meta property="og:image" content="https://www.liaoxuefeng.com/files/attachments/0013849087937492135fbf4bbd24dfcbc18349a8a59d36d000/0">
+<meta property="og:updated_time" content="2018-11-30T14:23:41.154Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git学习资料">
+<meta name="twitter:description" content="# 关于git的学习笔记   了解git什么是gitGit是目前世界上最先进的分布式版本控制系统。 git的特点 版本库本地化，支持离线提交，相对独立不影响协同开发。 把内容按元数据方式存储，完整克隆版本库。 支持快速切换分支方便合并，比较合并性能好。 分布式版本库，无单点故障，内容完整性好。 更少的“仓库污染”。  操作git创建版本库 打开程序并输入$ mkdir simple$ cd si">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/779cb133gy1fkp0bjdo3bj20rs0rsmyn.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/11/24/i收藏一份git学习资料/">
+
+
+
+
+
+  <title>git学习资料 | LFJ的学习笔记</title>
+  
+
+
+
+
+
+
+
+
 </head>
-<body>
-<header class="header">
-    <div class="header-inner">
-        <div class="header-title">
 
-        </div>
-        <nav class="header-nav">
-            
-            <a href="/" class="header-nav-link">
-                首页
-            </a>
-            
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-            
-            <a href="/archives" class="header-nav-link">
-                归档
-            </a>
-            
+  
+  
+    
+  
 
-            
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
 
-            
-        </nav>
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">LFJ的学习笔记</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-</header>
-<header class="mobile-header">
-    <div class="mobile-nav">
-        <div class="mobile-nav-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="mobile-nav-title">
-            <a href="/" class="mobile-nav-title-link">LFJ's Blog</a>
-        </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
 
-    </div>
-    <nav class="mobile-menu">
-        <ul class="mobile-menu-list">
-            <li class="mobile-menu-item">
-                <i class="iconfont icon-home"></i>
-                <a href="/" class="mobile-nav-link">首页</a>
-            </li>
-            <li class="mobile-menu-item">
-                <i class="iconfont icon-archive"></i>
-                <a href="/archives" class="mobile-nav-link">归档</a>
-            </li>
-            <li class="mobile-menu-item">
-                <i class="iconfont icon-tag"></i>
-                <a href="/tags" class="mobile-nav-link">标签</a>
-            </li>
-            <li class="mobile-menu-item">
-                <i class="iconfont icon-about"></i>
-                <a href="/about/" class="mobile-nav-link">关于</a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<div class="main">
-    <div class="content-inner">
-        <div class="posts">
-    <article class="post-whole">
-        <div class="post-title">
-            <h2 class="title">git学习资料</h2>
-            <div class="post-meta">
-                <span class="post-time">2018-11-24</span>
-                
-                <span class="post-visit"> 阅读次数：<span id="busuanzi_value_page_pv"></span></span>
-            </div>
-        </div>
-        <div class="post-toc" id="post-toc">
-    <strong class="post-toc-title">目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#了解git"><span class="toc-text">了解git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是git"><span class="toc-text">什么是git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git的特点"><span class="toc-text">git的特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#操作git"><span class="toc-text">操作git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建版本库"><span class="toc-text">创建版本库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#时光机穿梭"><span class="toc-text">时光机穿梭</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#起初"><span class="toc-text">起初</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#版本回退"><span class="toc-text">版本回退</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#工作区和暂存区"><span class="toc-text">工作区和暂存区</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#管理修改"><span class="toc-text">管理修改</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#撤销修改"><span class="toc-text">撤销修改</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除文件"><span class="toc-text">删除文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#远程仓库"><span class="toc-text">远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#添加远程仓库"><span class="toc-text">添加远程仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#从远程库克隆"><span class="toc-text">从远程库克隆</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分支管理"><span class="toc-text">分支管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建与合并分支"><span class="toc-text">创建与合并分支</span></a></li></ol></li></ol></li></ol>
-    <div class="back-to-top" id="back-to-top">
-        <a href="javascript:void(0);">回到顶部</a>
-    </div>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
-        <div class="post-content">
-            <p>﻿# 关于git的学习笔记</p>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/24/i收藏一份git学习资料/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LFJ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LFJ的学习笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">git学习资料</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-24T16:25:28+08:00">
+                2018-11-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/24/i收藏一份git学习资料/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/24/i收藏一份git学习资料/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>﻿# 关于git的学习笔记</p>
 <hr>
 <p><img src="https://ws1.sinaimg.cn/large/779cb133gy1fkp0bjdo3bj20rs0rsmyn.jpg" alt="simle"></p>
 <h2 id="了解git"><a href="#了解git" class="headerlink" title="了解git"></a>了解git</h2><h3 id="什么是git"><a href="#什么是git" class="headerlink" title="什么是git"></a>什么是git</h3><p>Git是目前世界上最先进的<strong>分布式版本控制系统</strong>。</p>
@@ -146,54 +395,380 @@
 <h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><p>分支在实际中有什么用呢？假设你准备开发一个新功能，但是需要两周才能完成，第一周你写了50%的代码，如果立刻提交，由于代码还没写完，不完整的代码库会导致别人不能干活了。如果等代码全部写完再一次提交，又存在丢失每天进度的巨大风险。<br>现在有了分支，就不用怕了。你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，想提交就提交，直到开发完毕后，再一次性合并到原来的分支上，这样，既安全，又不影响别人工作。<br>其他版本控制系统如SVN等都有分支管理，但是用过之后你会发现，这些版本控制系统创建和切换分支比蜗牛还慢，简直让人无法忍受，结果分支功能成了摆设，大家都不去用。<br>但Git的分支是与众不同的，无论创建、切换和删除分支，Git在1秒钟之内就能完成！无论你的版本库是1个文件还是1万个文件。</p>
 <h4 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h4><p>在版本回退里，你已经知道，每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即master分支。HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。<br><img src="https://www.liaoxuefeng.com/files/attachments/0013849087937492135fbf4bbd24dfcbc18349a8a59d36d000/0" alt="24"><br>Git鼓励大量使用分支：<br>查看分支：<code>git branch</code><br>创建分支：<code>git branch &lt;name&gt;</code><br>切换分支：<code>git checkout &lt;name&gt;</code><br>创建+切换分支：<code>git checkout -b &lt;name&gt;</code><br>合并某分支到当前分支：<code>git merge &lt;name&gt;</code><br>删除分支：<code>git branch -d &lt;name&gt;</code></p>
 
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/29/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
         </div>
         
-    </article>
-</div>
-<div class="paginator">
-    
-        
-            <a class="prev" href="/2018/11/29/hello-world/">
-                <i class="iconfont icon-prev"></i>
-                <span class="nav-default">Hello World</span>
-                <span class="nav-mobile">上一篇</span>
-            </a>
-        
-        
-    
-</div>
-<div id="comment-container"></div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
-</div>
-<footer class="footer-social">
-    
+  </div>
 
+  <aside id="sidebar" class="sidebar">
     
+    <div class="sidebar-inner">
 
-    
+      
 
-    <div class="footer-copyright">
-        <p class="time-line">
-            &copy;
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
+              <p class="site-author-name" itemprop="name">LFJ</p>
+              <p class="site-description motion-element" itemprop="description">Stay Hungry.Stay Foolish.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
             
-            2018
-            &nbsp;<i class="iconfont icon-heart"></i>&nbsp;
-            <a target="_blank" href="https://github.com/iJinxin">LFJ</a>
-        </p>
-        <p class="theme-info">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme -
-            <a target="_blank" href="https://github.com/iJinxin/hexo-theme-sky">Sky</a>
-        </p>
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#了解git"><span class="nav-number">1.</span> <span class="nav-text">了解git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是git"><span class="nav-number">1.1.</span> <span class="nav-text">什么是git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git的特点"><span class="nav-number">1.2.</span> <span class="nav-text">git的特点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作git"><span class="nav-number">2.</span> <span class="nav-text">操作git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建版本库"><span class="nav-number">2.1.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时光机穿梭"><span class="nav-number">2.2.</span> <span class="nav-text">时光机穿梭</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#起初"><span class="nav-number">2.2.1.</span> <span class="nav-text">起初</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#版本回退"><span class="nav-number">2.2.2.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#工作区和暂存区"><span class="nav-number">2.2.3.</span> <span class="nav-text">工作区和暂存区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#管理修改"><span class="nav-number">2.2.4.</span> <span class="nav-text">管理修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#撤销修改"><span class="nav-number">2.2.5.</span> <span class="nav-text">撤销修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除文件"><span class="nav-number">2.2.6.</span> <span class="nav-text">删除文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程仓库"><span class="nav-number">2.3.</span> <span class="nav-text">远程仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加远程仓库"><span class="nav-number">2.3.1.</span> <span class="nav-text">添加远程仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从远程库克隆"><span class="nav-number">2.3.2.</span> <span class="nav-text">从远程库克隆</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理"><span class="nav-number">2.4.</span> <span class="nav-text">分支管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建与合并分支"><span class="nav-number">2.4.1.</span> <span class="nav-text">创建与合并分支</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
     </div>
-</footer>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LFJ</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '9tEm3dD72Q8ytIBMtLIXwdwV-gzGzoHsz',
+        appKey: '8Tfsrg16TDHH3HnH4MqCCYbx',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
 </html>
